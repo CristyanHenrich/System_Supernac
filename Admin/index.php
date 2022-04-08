@@ -133,6 +133,8 @@ include("../BD/conexao.php");
             justify-content: flex-start;
             align-items: center;
             gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 40px;
         }
 
         .Tarefas {
@@ -221,7 +223,7 @@ include("../BD/conexao.php");
 
         <div id="Information">
             <section class="PersonalDataCalled" id="Chamados_Concluidos_Por_Voce">
-                <h4>Em estoque 🟢</h4>
+                <h4>Estoque alto 🟢</h4>
                 <div class="ldBar" data-value="80" data-preset="fan" data-type="stroke" style="width: 200px;height: 130px;">
                 </div>
             </section>
@@ -233,7 +235,7 @@ include("../BD/conexao.php");
             </section>
 
             <section class="PersonalDataCalled" id="Chamados_Concluidos_Por_Voce">
-                <h4>Total de vendas 🛒</h4>
+                <h4>Total em vendas 🛒</h4>
                 <h1 id="TotalComputadores">X</h1>
             </section>
 
@@ -251,7 +253,7 @@ include("../BD/conexao.php");
 
                 <?php
 
-                $sql_read = "SELECT * FROM vendas";
+                $sql_read = "SELECT * FROM vendas ORDER BY ID DESC LIMIT 5";
                 $dados = $PDO->query($sql_read);
                 $resultado = $dados->fetchAll(PDO::FETCH_ASSOC);
 
@@ -268,7 +270,6 @@ include("../BD/conexao.php");
 
                 <?php } ?>
 
-                <span id="AddTarefa"><i class="fas fa-solid fa-plus fa-2x"></i></span>
             </section>
 
         </div>
