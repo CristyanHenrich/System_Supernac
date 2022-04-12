@@ -3,6 +3,70 @@
 
 <?php
 include("../BD/conexao.php");
+
+//TOTAL USUARIOS
+
+$sth = $PDO->prepare("SELECT * FROM usuarios");
+$sth->execute();
+
+$result = $sth->fetchAll();
+
+$TotalUsuarios = count($result);
+
+//TOTAL USUARIOS
+
+//TOTAL VENDAS
+
+$sql_read_prod = "SELECT * FROM vendas";
+$dados_prod = $PDO->query($sql_read_prod);
+
+$TotalVendas = 0;
+
+while ($p = $dados_prod->fetch(PDO::FETCH_OBJ)) {
+
+	$precoProdutos = $p->TOTAL_VENDA;
+    $TotalVendas = $TotalVendas + $precoProdutos;
+    
+};
+
+//TOTAL VENDAS
+
+//ESTOQUE TOTAL
+
+$stmt = $PDO->prepare("SELECT * FROM produtos");
+$stmt->execute();
+
+$resultET = $stmt->fetchAll();
+
+$EstoqueTotal = count($resultET);
+
+//ESTOQUE TOTAL
+
+//ESTOQUE ALTO
+
+$stmt = $PDO->prepare("SELECT * FROM produtos WHERE QUANTIDADE >= 100");
+$stmt->execute();
+
+$resultEA = $stmt->fetchAll();
+
+$EstoqueAlto = count($resultEA);
+
+//ESTOQUE ALTO
+
+//ESTOQUE BAIXO
+
+$stmt = $PDO->prepare("SELECT * FROM produtos WHERE QUANTIDADE < 100");
+$stmt->execute();
+
+$resultEB = $stmt->fetchAll();
+
+$EstoqueBaixo = count($resultEB);
+
+//ESTOQUE BAIXO
+
+$PorcentagemEA = ($EstoqueAlto / $EstoqueTotal) * 100;
+$PorcentagemEB = ($EstoqueBaixo / $EstoqueTotal) * 100;
+
 ?>
 
 <!DOCTYPE html>
@@ -214,6 +278,11 @@ include("../BD/conexao.php");
             width: 500px !important;
             height: 200px !important;
         }
+
+        #ValorCompra{
+            color: #2aae2a;
+            padding-left: 5px;
+        }
     </style>
 </head>
 
@@ -224,24 +293,24 @@ include("../BD/conexao.php");
         <div id="Information">
             <section class="PersonalDataCalled" id="Chamados_Concluidos_Por_Voce">
                 <h4>Estoque alto 🟢</h4>
-                <div class="ldBar" data-value="80" data-preset="fan" data-type="stroke" style="width: 200px;height: 130px;">
+                <div class="ldBar" data-value="<?php echo $PorcentagemEA; ?>" data-preset="fan" data-type="stroke" style="width: 200px;height: 130px;">
                 </div>
             </section>
 
             <section class="PersonalDataCalled" id="Chamados_Cancelados_Por_Voce">
                 <h4>Estoque baixo 🔴</h4>
-                <div class="ldBar" data-value="20" data-preset="fan" style="width: 200px;height: 130px;">
+                <div class="ldBar" data-value="<?php echo $PorcentagemEB; ?>" data-preset="fan" style="width: 200px;height: 130px;">
                 </div>
             </section>
 
             <section class="PersonalDataCalled" id="Chamados_Concluidos_Por_Voce">
                 <h4>Total em vendas 🛒</h4>
-                <h1 id="TotalComputadores">X</h1>
+                <h1 id="TotalComputadores">R$ <?php echo $TotalVendas ?></h1>
             </section>
 
             <section class="PersonalDataCalled" id="Chamados_Cancelados_Por_Voce">
                 <h4>Total de usuários 🌐</h4>
-                <h1 id="TotalUsuarios">X</h1>
+                <h1 id="TotalUsuarios"><?php echo $TotalUsuarios; ?></h1>
             </section>
 
         </div>
@@ -260,12 +329,14 @@ include("../BD/conexao.php");
                 foreach ($resultado as $dado) {
 
 	            $ID = $dado['ID'];
+                $CLIENTE = $dado['NOME'];
 	            $TOTAL = $dado['TOTAL_VENDA'];
 
                 ?>
 
                     <article id="<?php echo $ID; ?>" class="Tarefas">
-                        <h6><?php echo $TOTAL; ?></h6>
+                        <h6><?php echo $CLIENTE; ?> | </h6>
+                        <h6 id="ValorCompra">R$ <?php echo $TOTAL; ?></h6>
                     </article>
 
                 <?php } ?>
