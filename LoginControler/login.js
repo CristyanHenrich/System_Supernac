@@ -34,7 +34,7 @@ $('#formLogin').submit(function (e) {
 
                     } else if (data == '"Cliente"') {
                         //alert("Voce e Cliente");
-                        //window.location.href = "";
+                        window.location.href = "./Cliente/index.php";
 
                     } else if (data == '"Funcionario"') {
                         //alert("Voce e Funcionario");

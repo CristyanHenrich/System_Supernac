@@ -65,13 +65,17 @@ exit;
             </a>
 
             <section id="PerfilMenuInfo">
-                <h6 style="color: #A9A9A9;">Usuario</h6>
+                <h6 style="color: #A9A9A9;"><?php if (!isset($_SESSION)) { ?> <a href="../LoginPage.php" style="text-decoration: none; color: #A9A9A9;">Entrar</a> <?php } else { echo $_SESSION['NOME']; } ?></h6>
                 <div class="menu-drop">
-                    <img id="ImgPerfil" src="./img/User.png" alt="" width="50" height="50">
+                    <img id="ImgPerfil" src="<?php if (!isset($_SESSION)) { echo "./img/User.png"; } else { echo $_SESSION['FOTO']; } ?>" alt="" width="50" height="50">
+
+                    <?php if (!isset($_SESSION)) {  } else { ?>
                     <div class="drop-content">
                         <a href="#"><span style="color: #0057b8;"><i class="fas fa-solid fa-user fa-lg"></i></span></a>
                         <a href="#"><span style="color: #0057b8;"><i class="fas fa-solid fa-power-off fa-lg"></i></span></a>
                     </div>
+                    <?php } ?>
+                    
                 </div>
             </section>
 

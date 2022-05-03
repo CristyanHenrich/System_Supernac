@@ -1,8 +1,8 @@
 <?php
 
-$dsn = "mysql:host=172.106.0.115;dbname=system_supernac;charset=utf8";
-$usuario = "supernac";
-$senha = "projetosupernacsl123.";
+$dsn = "mysql:host=localhost;dbname=system_supernac;charset=utf8";
+$usuario = "root";
+$senha = "";
 
 try {
 

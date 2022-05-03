@@ -21,17 +21,19 @@ if($dados->rowCount() >= 1){
 
     }
 
-    session_start();
-    $_SESSION['NOME'] = $nome;
-    $_SESSION['CPF'] = $cpf;
-    $_SESSION['EMAIL'] = $email;
-    $_SESSION['TIPO'] = $tipo;
-    $_SESSION['FOTO'] = $foto;
+        session_start();
+        $_SESSION['NOME'] = $nome;
+        $_SESSION['CPF'] = $cpf;
+        $_SESSION['EMAIL'] = $email;
+        $_SESSION['TIPO'] = $tipo;
+        $_SESSION['FOTO'] = $foto;
 
-    $dados = $tipo;
+        $dados = $tipo;
 
 } else {
-	$dados = "NA";
+	    $dados = "NA";
 };
 
 echo json_encode($dados);
+
+?>
