@@ -33,8 +33,8 @@ $data = $sth->fetchAll();
     margin-top: 50px;
 }
 
-#AP h1{
-  margin: 50px;
+#AP h1 {
+    margin: 50px;
 }
 
 .destaques img {
@@ -64,10 +64,101 @@ $data = $sth->fetchAll();
     justify-content: space-around;
     align-items: center;
 }
+
+.Categorias {
+    width: 100%;
+    height: 40px;
+    background-color: #FF8900;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.Categorias h6 {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+}
+
+.Categorias h6:hover {
+    background-color: #FFFFFF;
+    color: #FF8900;
+}
+
+.Novidade{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.Novidade article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.NovoProduto{
+    width: 300px;
+    height: 400px;
+    background-color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.NovoProduto img{
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+}
+
+.NovoProduto p{
+    margin: 10px;
+}
+
+.NovoProduto h5{
+    margin: 10px;
+    font-size: 25px;
+    font-weight:600;
+    color: #FF8900; 
 }
 </style>
 
 <body>
+
+    <div class="Categorias">
+        <h6 hrfe="www.google.com">Alimentos</h6>
+        <h6 hrfe="www.google.com">Bebidas</h6>
+        <h6 hrfe="www.google.com">Acogue</h6>
+        <h6 hrfe="www.google.com">Padaria</h6>
+        <h6 hrfe="www.google.com">Eletronicos</h6>
+        <h6 hrfe="www.google.com">Informatica</h6>
+    </div>
+
 
     <div class="slider">
 
@@ -107,9 +198,13 @@ $data = $sth->fetchAll();
 
     <div id="AP" class="produtos">
 
-    <h1>Alguns Produtos</h1>
+        <h1>Alguns Produtos</h1>
 
         <section id="OP" class="container">
+
+
+
+
 
             <?php foreach ($data as $dat) { ?>
 
@@ -121,7 +216,48 @@ $data = $sth->fetchAll();
 
             <?php } ?>
 
+
         </section>
+
+    </div>
+
+
+    <div class="container Novidade">
+
+        <h1>Novidades</h1>
+
+        <article>
+
+        <section class="NovoProduto">
+
+            <img src="./img/Logo.png">
+
+            <p>It is a long established fact that </p>
+
+            <h5>R$ 120,00</h5>
+
+        </section>
+
+        <section class="NovoProduto">
+
+            <img src="./img/Logo.png">
+
+            <p>It is a long established fact that </p>
+
+            <h5>R$ 120,00</h5>
+
+        </section>
+
+        <section class="NovoProduto">
+
+            <img src="./img/Logo.png">
+
+            <p>It is a long established fact that </p>
+
+            <h5>R$ 120,00</h5>
+
+        </section>
+        </article>
 
     </div>
 
