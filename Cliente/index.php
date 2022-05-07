@@ -95,7 +95,12 @@ $data = $sth->fetchAll();
     margin: 0;
 }
 
-.Categorias h6:hover {
+.Categorias h6 a{
+    text-decoration: none;
+    color: white;
+}
+
+.Categorias h6 a:hover {
     background-color: #FFFFFF;
     color: #FF8900;
 }
@@ -151,12 +156,12 @@ $data = $sth->fetchAll();
 <body>
 
     <div class="Categorias">
-        <h6 hrfe="www.google.com">Alimentos</h6>
-        <h6 hrfe="www.google.com">Bebidas</h6>
-        <h6 hrfe="www.google.com">Acogue</h6>
-        <h6 hrfe="www.google.com">Padaria</h6>
-        <h6 hrfe="www.google.com">Eletronicos</h6>
-        <h6 hrfe="www.google.com">Informatica</h6>
+        <h6><a href="filtro.php?categoria=Alimentos">Alimentos</a></h6>
+        <h6><a href="filtro.php?categoria=Bebidas">Bebidas</a></h6>
+        <h6><a href="filtro.php?categoria=Acogue">Acogue</a></h6>
+        <h6><a href="filtro.php?categoria=Padaria">Padaria</a></h6>
+        <h6><a href="filtro.php?categoria=Eletronicos">Eletronicos</a></h6>
+        <h6><a href="filtro.php?categoria=Informatica">Informatica</a></h6>
     </div>
 
 

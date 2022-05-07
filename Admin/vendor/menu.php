@@ -129,7 +129,7 @@
         <nav id="navgator">
             <ul>
                 <li id="Dashboad"><a href="./index.php"><span> <i href="./index.php" class="fas fa-solid fa-chart-pie fa-2x"></i> </span></a></li>
-                <li id="Relatorios"><a href="./Relatorios.php"><span> <i class="fas fa-solid fa-file-signature fa-2x"></i> </span></a></li>
+                <li id="Relatorios"><a href="./Produtos.php"><span> <i class="fas fa-solid fa-file-signature fa-2x"></i> </span></a></li>
             </ul>
         </nav>
     </section>

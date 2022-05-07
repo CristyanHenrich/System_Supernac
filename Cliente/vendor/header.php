@@ -69,7 +69,7 @@ $FOTO = $_SESSION['FOTO'];
                     <?php if (!isset($_SESSION)) {  } else { ?>
                     <div class="drop-content">
                         <a href="#"><span style="color: #0057b8;"><i class="fas fa-solid fa-user fa-lg"></i></span></a>
-                        <a href="#"><span style="color: #0057b8;"><i
+                        <a href="../LoginControler/logout.php"><span style="color: #0057b8;"><i
                                     class="fas fa-solid fa-power-off fa-lg"></i></span></a>
                     </div>
                     <?php } ?>
