@@ -54,7 +54,7 @@
             transition: width 1s, height 1s, transform 0.3s;
         }
 
-        #Chamados{
+        #Produtos{
             list-style-type: none;
             text-decoration: none;
             outline: none;
@@ -63,19 +63,19 @@
             text-shadow: black 0.05em 0.05em 0.06em
         }
 
-        #Chamados a{
+        #Produtos a{
             text-decoration: none;
             color: gray;
         }
 
-        #Chamados:hover {
+        #Produtos:hover {
             transform: translate(5px);
             color: #0057b8;
             opacity: 100%;
             transition: width 1s, height 1s, transform 0.3s;
         }
 
-        #Maquinas{
+        #Pessoas{
             list-style-type: none;
             text-decoration: none;
             outline: none;
@@ -84,19 +84,19 @@
             text-shadow: black 0.05em 0.05em 0.06em
         }
 
-        #Maquinas a{
+        #Pessoas a{
             text-decoration: none;
             color: gray;
         }
 
-        #Maquinas:hover {
+        #Pessoas:hover {
             transform: translate(5px);
             color: #0057b8;
             opacity: 100%;
             transition: width 1s, height 1s, transform 0.3s;
         }
 
-        #Relatorios{
+        #Vendas{
             list-style-type: none;
             text-decoration: none;
             outline: none;
@@ -105,17 +105,40 @@
             text-shadow: black 0.05em 0.05em 0.06em
         }
 
-        #Relatorios a{
+        #Vendas a{
             text-decoration: none;
             color: gray;
         }
 
-        #Relatorios:hover {
+        #Vendas:hover {
             transform: translate(5px);
             color: #0057b8;
             opacity: 100%;
             transition: width 1s, height 1s, transform 0.3s;
         }
+
+        #PDV{
+            list-style-type: none;
+            text-decoration: none;
+            outline: none;
+            color: gray;
+            opacity: 50%;
+            text-shadow: black 0.05em 0.05em 0.06em
+        }
+
+        #PDV a{
+            text-decoration: none;
+            color: gray;
+        }
+
+        #PDV:hover {
+            transform: translate(5px);
+            color: #0057b8;
+            opacity: 100%;
+            transition: width 1s, height 1s, transform 0.3s;
+        }
+
+
     </style>
 
 </head>
@@ -128,8 +151,11 @@
     <section id="menu" class="bg-light">
         <nav id="navgator">
             <ul>
-                <li id="Dashboad"><a href="./index.php"><span> <i href="./index.php" class="fas fa-solid fa-chart-pie fa-2x"></i> </span></a></li>
-                <li id="Relatorios"><a href="./Produtos.php"><span> <i class="fas fa-solid fa-file-signature fa-2x"></i> </span></a></li>
+                <li id="Dashboad"><a href="./index.php"><span><ion-icon name="pie-chart-sharp" style="font-size: 36px;"></ion-icon></span></a></li>
+                <li id="Produtos"><a href="./Produtos.php"><span><ion-icon name="cube-sharp" style="font-size: 36px;"></ion-icon></span></a></li>
+                <li id="Pessoas"><a href="./Pessoas.php"><span><ion-icon name="people-sharp" style="font-size: 36px;"></ion-icon></span></a></li>
+                <li id="Vendas"><a href="./Vendas.php"><span><ion-icon name="newspaper-sharp" style="font-size: 36px;"></ion-icon></span></a></li>
+                <li id="PDV"><a href="./PDV.php"><span><ion-icon name="desktop-sharp" style="font-size: 36px;"></ion-icon></span></a></li>
             </ul>
         </nav>
     </section>

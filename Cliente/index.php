@@ -56,6 +56,20 @@ $data = $sth->fetchAll();
     align-items: center;
 }
 
+.destaquesOferta {
+    display: column;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: white;
+    width: 250px;
+    height: 350px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+}
+
 #OP {
     display: flex;
     flex-direction: colum;
@@ -95,7 +109,7 @@ $data = $sth->fetchAll();
     margin: 0;
 }
 
-.Categorias h6 a{
+.Categorias h6 a {
     text-decoration: none;
     color: white;
 }
@@ -105,12 +119,12 @@ $data = $sth->fetchAll();
     color: #FF8900;
 }
 
-.Novidade{
+.Novidade {
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
-.Novidade article{
+.Novidade article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -121,7 +135,7 @@ $data = $sth->fetchAll();
     margin-top: 50px;
 }
 
-.NovoProduto{
+.NovoProduto {
     width: 300px;
     height: 400px;
     background-color: #FFFFFF;
@@ -135,21 +149,21 @@ $data = $sth->fetchAll();
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.NovoProduto img{
+.NovoProduto img {
     width: 200px;
     height: 200px;
     margin: 15px;
 }
 
-.NovoProduto p{
+.NovoProduto p {
     margin: 10px;
 }
 
-.NovoProduto h5{
+.NovoProduto h5 {
     margin: 10px;
     font-size: 25px;
-    font-weight:600;
-    color: #FF8900; 
+    font-weight: 600;
+    color: #FF8900;
 }
 </style>
 
@@ -159,7 +173,7 @@ $data = $sth->fetchAll();
         <h6><a href="filtro.php?categoria=Alimentos">Alimentos</a></h6>
         <h6><a href="filtro.php?categoria=Bebidas">Bebidas</a></h6>
         <h6><a href="filtro.php?categoria=Acogue">Acogue</a></h6>
-        <h6><a href="filtro.php?categoria=Padaria">Padaria</a></h6>
+        <h6><a href="filtro.php?categoria=Mercearia">Mercearia</a></h6>
         <h6><a href="filtro.php?categoria=Eletronicos">Eletronicos</a></h6>
         <h6><a href="filtro.php?categoria=Informatica">Informatica</a></h6>
     </div>
@@ -211,7 +225,18 @@ $data = $sth->fetchAll();
 
 
 
-            <?php foreach ($data as $dat) { ?>
+            <?php foreach ($data as $dat) { 
+
+                if($dat['OFERTA'] == 'S'){ ?>
+
+            <div class="destaquesOferta">
+                <img src="../STORAGE/<?php echo $dat['FOTO'] ?>" alt="Produto 1">
+                <p> <?php echo $dat['DESCRICAO'] ?> </p>
+                <p class="preco"> R$ <?php echo $dat['PRECO'] ?> </p>
+            </div>
+
+            <?php } else { ?>
+
 
             <div class="destaques">
                 <img src="../STORAGE/<?php echo $dat['FOTO'] ?>" alt="Produto 1">
@@ -219,7 +244,7 @@ $data = $sth->fetchAll();
                 <p class="preco"> R$ <?php echo $dat['PRECO'] ?> </p>
             </div>
 
-            <?php } ?>
+            <?php } }?>
 
 
         </section>
@@ -233,35 +258,35 @@ $data = $sth->fetchAll();
 
         <article>
 
-        <section class="NovoProduto">
+            <section class="NovoProduto">
 
-            <img src="./img/Logo.png">
+                <img src="./img/Logo.png">
 
-            <p>It is a long established fact that </p>
+                <p>It is a long established fact that </p>
 
-            <h5>R$ 120,00</h5>
+                <h5>R$ 120,00</h5>
 
-        </section>
+            </section>
 
-        <section class="NovoProduto">
+            <section class="NovoProduto">
 
-            <img src="./img/Logo.png">
+                <img src="./img/Logo.png">
 
-            <p>It is a long established fact that </p>
+                <p>It is a long established fact that </p>
 
-            <h5>R$ 120,00</h5>
+                <h5>R$ 120,00</h5>
 
-        </section>
+            </section>
 
-        <section class="NovoProduto">
+            <section class="NovoProduto">
 
-            <img src="./img/Logo.png">
+                <img src="./img/Logo.png">
 
-            <p>It is a long established fact that </p>
+                <p>It is a long established fact that </p>
 
-            <h5>R$ 120,00</h5>
+                <h5>R$ 120,00</h5>
 
-        </section>
+            </section>
         </article>
 
     </div>

@@ -53,6 +53,7 @@ exit;
 
     <script src="./js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/Header.css"/>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </head>
 
 <body>
