@@ -1,4 +1,5 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
@@ -6,6 +7,15 @@
 -- Tempo de geração: 06/05/2022 às 02:32
 -- Versão do servidor: 10.4.21-MariaDB
 -- Versão do PHP: 7.3.31
+=======
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 03-Maio-2022 às 23:00
+-- Versão do servidor: 10.4.17-MariaDB
+-- versão do PHP: 7.3.27
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +34,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Estrutura para tabela `carrinho`
+=======
+-- Estrutura da tabela `carrinho`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 CREATE TABLE `carrinho` (
@@ -44,7 +58,11 @@ CREATE TABLE `carrinho` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Estrutura para tabela `produtos`
+=======
+-- Estrutura da tabela `produtos`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 CREATE TABLE `produtos` (
@@ -59,7 +77,11 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+<<<<<<< HEAD
 -- Despejando dados para a tabela `produtos`
+=======
+-- Extraindo dados da tabela `produtos`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 INSERT INTO `produtos` (`ID`, `NOME`, `DESCRICAO`, `CATEGORIA`, `OFERTA`, `QUANTIDADE`, `PRECO`, `FOTO`) VALUES
@@ -71,7 +93,11 @@ INSERT INTO `produtos` (`ID`, `NOME`, `DESCRICAO`, `CATEGORIA`, `OFERTA`, `QUANT
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Estrutura para tabela `usuarios`
+=======
+-- Estrutura da tabela `usuarios`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 CREATE TABLE `usuarios` (
@@ -85,7 +111,11 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+<<<<<<< HEAD
 -- Despejando dados para a tabela `usuarios`
+=======
+-- Extraindo dados da tabela `usuarios`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 INSERT INTO `usuarios` (`ID`, `NOME`, `CPF`, `EMAIL`, `SENHA`, `TIPO`, `FOTO`) VALUES
@@ -98,7 +128,11 @@ INSERT INTO `usuarios` (`ID`, `NOME`, `CPF`, `EMAIL`, `SENHA`, `TIPO`, `FOTO`) V
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Estrutura para tabela `vendas`
+=======
+-- Estrutura da tabela `vendas`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 CREATE TABLE `vendas` (
@@ -112,7 +146,11 @@ CREATE TABLE `vendas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+<<<<<<< HEAD
 -- Despejando dados para a tabela `vendas`
+=======
+-- Extraindo dados da tabela `vendas`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 INSERT INTO `vendas` (`ID`, `IDU`, `NOME`, `CPF`, `DATA`, `PRODUTOS_QTD`, `TOTAL_VENDA`) VALUES
@@ -127,31 +165,51 @@ INSERT INTO `vendas` (`ID`, `IDU`, `NOME`, `CPF`, `DATA`, `PRODUTOS_QTD`, `TOTAL
 --
 
 --
+<<<<<<< HEAD
 -- Índices de tabela `carrinho`
+=======
+-- Índices para tabela `carrinho`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 ALTER TABLE `carrinho`
   ADD PRIMARY KEY (`ID`);
 
 --
+<<<<<<< HEAD
 -- Índices de tabela `produtos`
+=======
+-- Índices para tabela `produtos`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`ID`);
 
 --
+<<<<<<< HEAD
 -- Índices de tabela `usuarios`
+=======
+-- Índices para tabela `usuarios`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`ID`);
 
 --
+<<<<<<< HEAD
 -- Índices de tabela `vendas`
+=======
+-- Índices para tabela `vendas`
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 ALTER TABLE `vendas`
   ADD PRIMARY KEY (`ID`);
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT para tabelas despejadas
+=======
+-- AUTO_INCREMENT de tabelas despejadas
+>>>>>>> 6d7ef29f8c34b97a1d5ba59c31b9fca400dd959d
 --
 
 --
