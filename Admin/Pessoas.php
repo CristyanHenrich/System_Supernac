@@ -124,7 +124,7 @@
                     <?php foreach ($rowPessoas as $data) { ?>
 
                     <tr>
-                        <td class="text-center"><img style="width: 60px; heigth: 60px; border-radius: 50%;" src="../STORAGE/Usuarios/1_1647199447.png"></td>
+                        <td class="text-center"><img style="width: 60px; heigth: 60px; border-radius: 50%;" src="../STORAGE/<?php echo $data['FOTO'] ?>"></td>
                         <td class="text-center"><a href="./Pessoa.php?id=<?php echo $data['ID'] ?>"><?php echo $data['NOME'] ?></a></td>
                         <td class="text-center"><?php echo $data['EMAIL'] ?></td>
                         <td class="text-center"><?php echo $data['CPF'] ?> </td>
